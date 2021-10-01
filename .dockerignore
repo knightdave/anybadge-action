@@ -1,0 +1,7 @@
+.git
+.github
+action.yaml
+tests
+LICENSE
+README.md
+.gitignore
