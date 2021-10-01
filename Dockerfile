@@ -12,10 +12,9 @@ COPY entrypoint.sh /entrypoint.sh
 WORKDIR /home/anybadge/
 USER 1001
 COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+RUN python3 -m pip install --no-cache-dir -r requirements.txt
 
 WORKDIR /workdir
-
 
 ENTRYPOINT ["/entrypoint.sh"]
 
