@@ -20,6 +20,6 @@ if [[ ${INPUT_USE_MAX} != "" ]]; then options+=(--use-max="${INPUT_USE_MAX}") ; 
 if [[ ${INPUT_OVERWRITE} == true ]]; then options+=(--overwrite) ; fi
 if [[ ${INPUT_TEXT_COLOR} != "" ]]; then options+=(--text-color="${INPUT_TEXT_COLOR}") ; fi
 
-echo "anybadge ${options[@]} ${INPUT_ARGS}"
+env
 
 anybadge "${options[@]}" "${INPUT_ARGS}"
