@@ -66,7 +66,7 @@ inputs:
     description: Text color. Single value affects both labeland value colors. A comma separated pair affects label and value text respectively
     required: false
     default: ""
-  args:
+  anybadge_args:
     description: Pairs of <upper>=<color>. For example 2=red 4=orange 6=yellow 8=good. Read this as "Less than 2 = red, less than 4 = orange...
     required: false
     default: ""
