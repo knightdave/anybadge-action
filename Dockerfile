@@ -1,8 +1,8 @@
 FROM python:3.9.7-alpine3.14
 RUN apk add --no-cache bash==5.1.4-r0
 COPY entrypoint.sh /entrypoint.sh
-COPY requirements.txt .
-RUN python3 -m pip install --no-cache-dir -r requirements.txt
+COPY requirements.txt /requirements.txt
+RUN python3 -m pip install --no-cache-dir -r /requirements.txt
 
 WORKDIR /workdir
 
