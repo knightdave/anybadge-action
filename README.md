@@ -1,22 +1,28 @@
 # anybadge-action
+
 Action for generating badges for your projects based on [anybadge](https://github.com/jongracecox/anybadge)
 
 It runs badge creation offline wihout calls to extenal badge services.
 
 <!-- BEGIN_ACTION_DOC -->
+
 # Anybadge Action
 
 ### Description
+
 A Github Action that generates badge for you project using anybadge.
 
 ### Action Type
+
 Docker
 
 ### Author
+
 knightdave
 
 ### Inputs
-* `file`:
+
+- `file`:
 
   _Description_: Output file location
 
@@ -24,7 +30,7 @@ knightdave
 
   _Default_: `badge.svg`
 
-* `label`:
+- `label`:
 
   _Description_: The badge label
 
@@ -32,7 +38,7 @@ knightdave
 
   _Default_: `""`
 
-* `value`:
+- `value`:
 
   _Description_: The badge value
 
@@ -40,7 +46,7 @@ knightdave
 
   _Default_: `""`
 
-* `value_format`:
+- `value_format`:
 
   _Description_: Formatting string for value (e.g. "%.2f" for 2dp floats)
 
@@ -48,7 +54,7 @@ knightdave
 
   _Default_: `""`
 
-* `color`:
+- `color`:
 
   _Description_: For fixed color badges use `colorto` specify the badge color
 
@@ -56,7 +62,7 @@ knightdave
 
   _Default_: `""`
 
-* `prefix`:
+- `prefix`:
 
   _Description_: Optional prefix for value
 
@@ -64,7 +70,7 @@ knightdave
 
   _Default_: `""`
 
-* `padding`:
+- `padding`:
 
   _Description_: Number of characters to pad on either side of the badge text
 
@@ -72,7 +78,7 @@ knightdave
 
   _Default_: `""`
 
-* `label_padding`:
+- `label_padding`:
 
   _Description_: Number of characters to pad on either side of the badge label
 
@@ -80,7 +86,7 @@ knightdave
 
   _Default_: `""`
 
-* `value_padding`:
+- `value_padding`:
 
   _Description_: Number of characters to pad on either side of the badge value
 
@@ -88,7 +94,7 @@ knightdave
 
   _Default_: `""`
 
-* `font`:
+- `font`:
 
   _Description_: Supported fonts "Arial, Helvetica, sans-serif"
 
@@ -96,7 +102,7 @@ knightdave
 
   _Default_: `""`
 
-* `font_size`:
+- `font_size`:
 
   _Description_: Font size
 
@@ -104,7 +110,7 @@ knightdave
 
   _Default_: `""`
 
-* `template`:
+- `template`:
 
   _Description_: Location of alternative template .svg file
 
@@ -112,7 +118,7 @@ knightdave
 
   _Default_: `""`
 
-* `use_max`:
+- `use_max`:
 
   _Description_: Use the maximum threshold color when the value exceeds the maximum threshold
 
@@ -120,7 +126,7 @@ knightdave
 
   _Default_: `""`
 
-* `overwrite`:
+- `overwrite`:
 
   _Description_: Overwrite output file if it already exists
 
@@ -128,7 +134,7 @@ knightdave
 
   _Default_: `false`
 
-* `text_color`:
+- `text_color`:
 
   _Description_: Text color. Single value affects both labeland value colors. A comma separated pair affects label and value text respectively
 
@@ -136,7 +142,7 @@ knightdave
 
   _Default_: `""`
 
-* `anybadge_args`:
+- `anybadge_args`:
 
   _Description_: Pairs of <upper>=<color>. For example 2=red 4=orange 6=yellow 8=good. Read this as "Less than 2 = red, less than 4 = orange...
 
@@ -145,5 +151,7 @@ knightdave
   _Default_: `""`
 
 ### Outputs
+
 None
+
 <!-- END_ACTION_DOC -->

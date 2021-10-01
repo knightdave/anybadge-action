@@ -1,16 +1,6 @@
 FROM python:3.9.7-alpine3.14
-RUN apk add --no-cache bash==5.1.4-r0 \
-    && mkdir /home/anybadge/ \
-    && addgroup -g 1001 anybadge \
-    && adduser -u 1001 -G anybadge -s /bin/bash -h /home/anybadge -D anybadge \
-    && chown -R 1001:1001 /home/anybadge/ \
-    && mkdir -p /workdir \
-    && chown -R 1001:1001 /workdir
-ENV PATH="/home/anybadge/.local/bin:${PATH}"
-ENV PYTHONPATH="/home/anybadge/.local/lib/python3.9:${PYTHONPATH}"
+RUN apk add --no-cache bash==5.1.4-r0
 COPY entrypoint.sh /entrypoint.sh
-WORKDIR /home/anybadge/
-USER 1001
 COPY requirements.txt .
 RUN python3 -m pip install --no-cache-dir -r requirements.txt
 

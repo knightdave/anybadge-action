@@ -3,8 +3,8 @@ author: knightdave
 description: |
   A Github Action that generates badge for you project using anybadge.
 branding:
-  icon: 'image'  
-  color: 'green'
+  icon: "image"
+  color: "green"
 inputs:
   file:
     description: Output file location
@@ -71,8 +71,5 @@ inputs:
     required: false
     default: ""
 runs:
-  using: 'docker'
-  image: './Dockerfile'
-
-
-
+  using: "docker"
+  image: "./Dockerfile"
