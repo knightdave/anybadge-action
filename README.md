@@ -1,6 +1,7 @@
 # anybadge-action
 Action for generating badges for your projects based on [anybadge](https://github.com/jongracecox/anybadge)
 
+It runs badge creation offline wihout calls to extenal badge services.
 
 <!-- BEGIN_ACTION_DOC -->
 # Anybadge Action
