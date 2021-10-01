@@ -136,7 +136,7 @@ knightdave
 
   _Default_: `""`
 
-* `args`:
+* `anybadge_args`:
 
   _Description_: Pairs of <upper>=<color>. For example 2=red 4=orange 6=yellow 8=good. Read this as "Less than 2 = red, less than 4 = orange...
 
