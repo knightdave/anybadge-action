@@ -20,4 +20,4 @@ if [[ ${INPUT_OVERWRITE} == true ]]; then options+=(--overwrite) ; fi
 if [[ ${INPUT_TEXT_COLOR} != "" ]]; then options+=(--text-color="${INPUT_TEXT_COLOR}") ; fi
 
 
-exec anybadge "${options[@]}" "${INPUT_ARGS}"
+anybadge "${options[@]}" "${INPUT_ARGS}"
