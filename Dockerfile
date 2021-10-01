@@ -7,6 +7,7 @@ RUN apk add --no-cache bash==5.1.4-r0 \
     && mkdir -p /workdir \
     && chown -R 1001:1001 /workdir
 ENV PATH="/home/anybadge/.local/bin:${PATH}"
+ENV PYTHONPATH="/home/anybadge/.local/lib/python3.9:${PYTHONPATH}"
 COPY entrypoint.sh /entrypoint.sh
 WORKDIR /home/anybadge/
 USER 1001
