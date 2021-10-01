@@ -18,7 +18,7 @@ inputs:
     description: The badge value
     required: false
     default: ""
-  value-format:
+  value_format:
     description: Formatting string for value (e.g. "%.2f" for 2dp floats)
     required: false
     default: ""
@@ -34,7 +34,7 @@ inputs:
     description: Number of characters to pad on either side of the badge text
     required: false
     default: ""
-  label-padding:
+  label_padding:
     description: Number of characters to pad on either side of the badge label
     required: false
     default: ""
@@ -46,7 +46,7 @@ inputs:
     description: Supported fonts "Arial, Helvetica, sans-serif"
     required: false
     default: ""
-  font-size:
+  font_size:
     description: Font size
     required: false
     default: ""
@@ -54,15 +54,15 @@ inputs:
     description: Location of alternative template .svg file
     required: false
     default: ""
-  use-max:
+  use_max:
     description: Use the maximum threshold color when the value exceeds the maximum threshold
     required: false
     default: ""
   overwrite:
     description: Overwrite output file if it already exists
     required: false
-    default: "false"
-  text-color:
+    default: false
+  text_color:
     description: Text color. Single value affects both labeland value colors. A comma separated pair affects label and value text respectively
     required: false
     default: ""

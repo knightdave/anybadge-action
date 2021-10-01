@@ -40,7 +40,7 @@ knightdave
 
   _Default_: `""`
 
-* `value-format`:
+* `value_format`:
 
   _Description_: Formatting string for value (e.g. "%.2f" for 2dp floats)
 
@@ -72,7 +72,7 @@ knightdave
 
   _Default_: `""`
 
-* `label-padding`:
+* `label_padding`:
 
   _Description_: Number of characters to pad on either side of the badge label
 
@@ -80,7 +80,7 @@ knightdave
 
   _Default_: `""`
 
-* `value-padding`:
+* `value_padding`:
 
   _Description_: Number of characters to pad on either side of the badge value
 
@@ -96,7 +96,7 @@ knightdave
 
   _Default_: `""`
 
-* `font-size`:
+* `font_size`:
 
   _Description_: Font size
 
@@ -112,7 +112,7 @@ knightdave
 
   _Default_: `""`
 
-* `use-max`:
+* `use_max`:
 
   _Description_: Use the maximum threshold color when the value exceeds the maximum threshold
 
@@ -128,7 +128,7 @@ knightdave
 
   _Default_: `false`
 
-* `text-color`:
+* `text_color`:
 
   _Description_: Text color. Single value affects both labeland value colors. A comma separated pair affects label and value text respectively
 
