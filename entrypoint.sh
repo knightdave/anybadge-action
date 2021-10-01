@@ -3,6 +3,9 @@ set -e
 
 declare -a options
 
+echo "::debug::pwd: $(pwd)"
+echo "::debug::id: $(id)"
+
 if [[ ${INPUT_FILE} != "" ]]; then options+=(--file="${INPUT_FILE}") ; fi
 if [[ ${INPUT_LABEL} != "" ]]; then options+=(--label="${INPUT_LABEL}") ; fi
 if [[ ${INPUT_VALUE} != "" ]]; then options+=(--value="${INPUT_VALUE}") ; fi
@@ -19,5 +22,6 @@ if [[ ${INPUT_USE_MAX} != "" ]]; then options+=(--use-max="${INPUT_USE_MAX}") ; 
 if [[ ${INPUT_OVERWRITE} == true ]]; then options+=(--overwrite) ; fi
 if [[ ${INPUT_TEXT_COLOR} != "" ]]; then options+=(--text-color="${INPUT_TEXT_COLOR}") ; fi
 
+echo "::debug::command: anybadge ${options[@]} ${INPUT_ARGS}"
 
 anybadge "${options[@]}" "${INPUT_ARGS}"
