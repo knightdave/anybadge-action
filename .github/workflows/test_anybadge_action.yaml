@@ -1,0 +1,60 @@
+---
+name: Anybadge action test
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  anybadge:
+    runs-on: ubuntu-latest
+    name: Test anybadge
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+
+      - name: Badge for coverage
+        uses: ./
+        with:
+          file: coverage.svg
+          value: 65
+          anybadge_args: coverage
+
+      - name: Badge for custom pylint
+        uses: ./
+        with:
+          file: pylint.svg
+          label: pylint
+          value: 2.22
+          anybadge_args: "2=red 4=orange 8=yellow 10=green"
+
+      - name: Badge for pipeline
+        uses: ./
+        with:
+          file: pipeline.svg
+          label: pipeline
+          value: passing
+          anybadge_args: "passing=green failing=red"
+
+      - name: Badge with fixed color
+        uses: ./
+        with:
+          file: awesomeness.svg
+          label: awesomeness
+          value: "110%"
+          color: "#97CA00"
+
+      - name: Badge based on semantic versions
+        uses: ./
+        with:
+          file: version.svg
+          label: Version
+          value: "2.4.5"
+          anybadge_args: "1.0.0=red 2.4.6=orange 2.9.1=yellow 999.0.0=green"
+
+      - name: Upload badge
+        uses: actions/upload-artifact@v2
+        with:
+          path: "*.svg"

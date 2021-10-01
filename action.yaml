@@ -1,0 +1,75 @@
+name: Anybadge Action
+author: knightdave
+description: |
+  A Github Action that generates badge for you project using anybadge.
+branding:
+  icon: "image"
+  color: "green"
+inputs:
+  file:
+    description: Output file location
+    required: true
+    default: "badge.svg"
+  label:
+    description: The badge label
+    required: false
+    default: ""
+  value:
+    description: The badge value
+    required: false
+    default: ""
+  value_format:
+    description: Formatting string for value (e.g. "%.2f" for 2dp floats)
+    required: false
+    default: ""
+  color:
+    description: For fixed color badges use `colorto` specify the badge color
+    required: false
+    default: ""
+  prefix:
+    description: Optional prefix for value
+    required: false
+    default: ""
+  padding:
+    description: Number of characters to pad on either side of the badge text
+    required: false
+    default: ""
+  label_padding:
+    description: Number of characters to pad on either side of the badge label
+    required: false
+    default: ""
+  value-padding:
+    description: Number of characters to pad on either side of the badge value
+    required: false
+    default: ""
+  font:
+    description: Supported fonts "Arial, Helvetica, sans-serif"
+    required: false
+    default: ""
+  font_size:
+    description: Font size
+    required: false
+    default: ""
+  template:
+    description: Location of alternative template .svg file
+    required: false
+    default: ""
+  use_max:
+    description: Use the maximum threshold color when the value exceeds the maximum threshold
+    required: false
+    default: ""
+  overwrite:
+    description: Overwrite output file if it already exists
+    required: false
+    default: false
+  text_color:
+    description: Text color. Single value affects both labeland value colors. A comma separated pair affects label and value text respectively
+    required: false
+    default: ""
+  anybadge_args:
+    description: Pairs of <upper>=<color>. For example 2=red 4=orange 6=yellow 8=good. Read this as "Less than 2 = red, less than 4 = orange...
+    required: false
+    default: ""
+runs:
+  using: "docker"
+  image: "./Dockerfile"
