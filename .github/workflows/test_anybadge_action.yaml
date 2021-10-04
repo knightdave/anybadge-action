@@ -16,7 +16,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Set action to use DOckerfile
-        uses: mikefarah/yq@4.13.3
+        uses: mikefarah/yq@v4.13.3
         with:
           cmd: yq e -i '.runs.image = "./Dockerfile"' action.yaml
 
